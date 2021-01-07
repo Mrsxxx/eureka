@@ -4,6 +4,9 @@ eureka:
       defaultZone: http://127.0.0.1:8761/eureka/
     # 注册中心server服务 不需要自己作为客户端
     register-with-eureka: false
+    #client反复上线保护机制 关闭    ，生产环境已经要打开
+  server:
+    enable-self-preservation: false
 spring:
   application:
     name: eureka
